@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">midterm</string>
+    <string name="base_landing_page_home_tab">HOME</string>
+    <string name="base_landing_page_favorites_tab">FAVORITES</string>
+    <string name="base_landing_page_search_tab">searchtab</string>
+    <string name="search">Search</string>
+    <string name="search_movie_title_or_series_name">search movie title or series name</string>
+</resources>

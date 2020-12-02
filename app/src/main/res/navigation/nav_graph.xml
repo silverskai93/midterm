@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:startDestination="@id/baseLandingPage">
+
+    <fragment
+        android:id="@+id/seasonscreenfragment"
+        android:name="android.example.midterm.ui.seasonscreen.SeasonScreenFragment"
+        android:label="seasonscreenfragment"
+        tools:layout="@layout/seasonscreenfragment">
+        <action
+            android:id="@+id/action_seasonscreenfragment_to_episodefragment"
+            app:destination="@+id/episodefragment">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchfragment"
+        android:name="android.example.midterm.ui.searchscreen.SearchFragment">
+
+        <action
+            android:id="@+id/action_searchfragment_to_overviewfragment"
+            app:destination="@id/overviewfragment">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/episodefragment"
+        android:name="android.example.midterm.ui.episodescreen.EpisodesFragment"
+        tools:layout="@layout/episodefragment" />
+
+    <fragment
+        android:id="@+id/overviewfragment"
+        android:name="android.example.midterm.ui.overviewscreen.OverviewFragment"
+        tools:layout="@layout/overviewfragment" >
+        <action
+            android:id="@+id/action_overviewfragment_to_seasonscreenfragment"
+            app:destination="@+id/seasonscreenfragment">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/baseLandingPage"
+        android:name="android.example.midterm.ui.tabs.pager.BaseLandingPage"
+        android:label="BaseLandingPage" >
+        <action
+            android:id="@+id/action_baseLandingPage_to_HomeScreenFragment"
+            app:destination="@id/homeScreenFragment">
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="android.example.midterm.ui.homescreen.HomeScreenFragment"
+        android:label="HomeScreenFragment" >
+        <action
+            android:id="@+id/action_homeScreenfragment_to_overviewfragment"
+            app:destination="@+id/overviewfragment"/>
+    </fragment>
+
+
+</navigation>
