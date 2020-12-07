@@ -27,8 +27,8 @@ class SeasonScreenViewModel(
         if (listcount != null) {
             for (i in 1..listcount) {
                  seasonList?.add(i)
-            }
-            seasonArrayLiveData.postValue(seasonList)
+                            }
+                            seasonArrayLiveData.postValue(seasonList)
         }
     }
 
