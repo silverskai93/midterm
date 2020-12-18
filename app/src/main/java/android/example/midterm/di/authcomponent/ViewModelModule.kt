@@ -1,7 +1,7 @@
 package android.example.midterm.di.authcomponent
 
 import android.example.midterm.ui.viewmodel.EpisodeScreenViewModel
-import android.example.midterm.ui.viewmodel.OverviewScreenViewModel
+import android.example.midterm.ui.overviewscreen.OverviewScreenViewModel
 import android.example.midterm.ui.viewmodel.SeasonScreenViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -17,7 +17,7 @@ class ViewModelModule {
     }
 
     private fun overviewModule() = module {
-        viewModel { OverviewScreenViewModel(get()) }
+        viewModel { OverviewScreenViewModel(get(), get()) }
     }
 
     private fun getModules() = arrayOf(

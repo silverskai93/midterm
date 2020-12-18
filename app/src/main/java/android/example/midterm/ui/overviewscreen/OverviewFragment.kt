@@ -1,17 +1,13 @@
 package android.example.midterm.ui.overviewscreen
 
 import android.example.midterm.R
-import android.example.midterm.data.model.model.EpisodeDetails
-import android.example.midterm.data.repo.OverviewFetchRepository
 import android.example.midterm.ui.overviewscreen.adapter.ThirdAdapter
-import android.example.midterm.ui.viewmodel.OverviewScreenViewModel
 import android.example.midterm.util.BaseFragment
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import org.koin.android.viewmodel.compat.ScopeCompat.viewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class OverviewFragment : BaseFragment<Any?, Any?>(){
